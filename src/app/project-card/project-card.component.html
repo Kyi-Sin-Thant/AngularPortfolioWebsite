@@ -22,7 +22,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <div  id="carouselExampleInterval-{{project.id}}" class="carousel slide">
+                <div  id="carouselExampleInterval-{{project.id}}" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-indicators">
                         <button type="button" [attr.data-bs-target]="'#carouselExampleInterval-'+project.id" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                         <button type="button" [attr.data-bs-target]="'#carouselExampleInterval-'+project.id" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -35,7 +35,7 @@
                                     <img src="{{picture}}" style="display: block;width: 100%;" alt="slide">
                                 </div>
                             }@else {
-                                <div class="carousel-item">
+                                <div class="carousel-item" >
                                     <img src="{{picture}}" style="display: block;width: 100%;" alt="slide">
                                 </div>
                             }
