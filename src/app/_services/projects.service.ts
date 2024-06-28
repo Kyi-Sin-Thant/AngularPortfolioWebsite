@@ -37,5 +37,22 @@ export class ProjectsService {
     return proj_name;
   }
 
+  getProjectByFilter(filterTags: Tag[]){
+    let filteredProjects: Project[] =[];
+
+    this.projects.forEach(function(project){
+      let foundAll = true;
+      filterTags.forEach(function(filterTag){
+        if(project.tags.includes(filterTag) == false){
+          foundAll = false;
+        }
+      });
+      if(foundAll){
+        filteredProjects.push(project);
+      }
+    });
+
+    return filteredProjects;
+  }
   
 }

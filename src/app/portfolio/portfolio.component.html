@@ -1,4 +1,47 @@
 <div class="container">
+    <div class="mb-2">
+        <div>
+            <button class="btn btn-outline-primary mb-2 me-2" data-bs-toggle="collapse" data-bs-target="#filterSelect" aria-expanded="false">Filter</button>
+        </div>
+        <div class="collapse" id="filterSelect">
+            <div class="border mb-2 shadow-sm" style="width: 250px;">
+                <form>
+                    <div class="row mx-0">
+                        <div class="col">
+                            <small><b>Languages:</b></small>
+                            <div class="form-check">
+                                <input type="checkbox" [(ngModel)]="typescript" (change)="Filter()" name="TypeScript" class="form-check-input position-static me-2">
+                                <label class="form-check-label small">TypeScript</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" [(ngModel)]="java" (change)="Filter()" name="Java" class="form-check-input position-static me-2">
+                                <label class="form-check-label small">Java</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" [(ngModel)]="csharp" (change)="Filter()" name="CSHARP" class="form-check-input position-static me-2">
+                                <label class="form-check-label small">C#</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" [(ngModel)]="javascript" (change)="Filter()" name="Javascript" class="form-check-input position-static me-2">
+                                <label class="form-check-label small">Javascript</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" [(ngModel)]="vbnet" (change)="Filter()" name="VBNet" class="form-check-input position-static me-2">
+                                <label class="form-check-label small">VB.NET</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" [(ngModel)]="php" (change)="Filter()" name="Php" class="form-check-input position-static me-2">
+                                <label class="form-check-label small">Php</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <small><b>FrameWorks:</b></small>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
     <div class="row">
         
         @for(project of projects; track $index){
